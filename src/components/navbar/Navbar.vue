@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-function toggle(event) {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.classList.toggle('expanded');
+function toggle(): void {
+    const sidebar: HTMLElement | null = document.querySelector('.sidebar');
+    if (sidebar) {
+        sidebar.classList.toggle('expanded');
+    }
 }
 </script>
 
